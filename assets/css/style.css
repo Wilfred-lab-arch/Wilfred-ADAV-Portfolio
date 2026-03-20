@@ -1,3 +1,4 @@
+
 /* ========================================
    GLOBAL RESET
 ======================================== */
@@ -7,13 +8,18 @@
     box-sizing: border-box;
 }
 
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
 
 /* ========================================
-   THEME VARIABLES (Dark + Gold)
+   THEME VARIABLES
 ======================================== */
 :root {
     --gold: #c6a75e;
     --gold-soft: #e6c77d;
+    --accent: #4fc3f7;
 
     --dark: #0c0c0f;
     --dark-2: #141418;
@@ -23,7 +29,6 @@
     --text: #e5e5e5;
     --muted: #a8a8a8;
 }
-
 
 /* ========================================
    BODY
@@ -35,7 +40,6 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
 }
-
 
 /* ========================================
    LAYOUT
@@ -49,7 +53,6 @@ body {
 .section {
     padding: 110px 0;
 }
-
 
 /* ========================================
    NAVBAR
@@ -92,22 +95,20 @@ body {
     color: var(--gold);
 }
 
-
-/* PROFILE IMAGE (merged + fixed) */
+/* PROFILE IMAGE */
 .nav-profile img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 2px solid var(--gold);
-    box-shadow: 0 0 25px rgba(198,167,94,.35);
+    box-shadow: 0 0 20px rgba(198,167,94,.35);
     transition: .3s;
 }
 
 .nav-profile img:hover {
     transform: scale(1.05);
 }
-
 
 /* ========================================
    HERO
@@ -117,7 +118,6 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
     background: radial-gradient(circle at top, #1a1a22, #0c0c0f);
 }
 
@@ -131,7 +131,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;
-    opacity: .8;
+    opacity: .6;
 }
 
 .hero-content {
@@ -139,6 +139,7 @@ body {
     z-index: 2;
     width: 55%;
     margin-left: auto;
+    max-width: 600px;
 }
 
 .hero h1 {
@@ -152,7 +153,6 @@ body {
     color: var(--muted);
 }
 
-
 /* ========================================
    BUTTON
 ======================================== */
@@ -162,6 +162,7 @@ body {
     padding: 14px 32px;
     border-radius: 30px;
     font-weight: 600;
+    cursor: pointer;
     transition: .3s;
 }
 
@@ -170,13 +171,15 @@ body {
     box-shadow: 0 0 25px var(--gold);
 }
 
-
 /* ========================================
    CARDS
 ======================================== */
 .card,
 .project-card,
 .skill-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background: var(--card);
     border: 1px solid var(--border);
     backdrop-filter: blur(12px);
@@ -190,9 +193,8 @@ body {
 .skill-card:hover {
     border-color: var(--gold);
     transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(198,167,94,.15);
+    box-shadow: 0 0 25px rgba(235, 170, 20, 0.15);
 }
-
 
 /* ========================================
    GRID
@@ -203,215 +205,85 @@ body {
     gap: 40px;
 }
 
-
 /* ========================================
-   ABOUT
+   ABOUT SECTION
 ======================================== */
-/* SECTION BASE */
-/* SECTION */
 .about-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  padding: 100px 8%;
-  background: linear-gradient(135deg, #0b0b0b, #111);
-  color: white;
-  align-items: center;
+    grid-template-columns: 1fr;
+    gap: 70px;
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #0b0b0b, #111);
+    align-items: center;
 }
 
-/* LEFT */
 .about-left h2 {
-  font-size: 2.7rem;
-  color: #d4af37;
-  margin-bottom: 25px;
+    font-size: 2.7rem;
+    color: var(--gold);
+    margin-bottom: 25px;
 }
 
 .about-left p {
-  color: #cfcfcf;
-  line-height: 1.7;
-  margin-bottom: 25px;
+    color: #cfcfcf;
+    margin-bottom: 25px;
 }
 
-/* GOLD BUTTON */
 .btn-gold {
-  background: #d4af37;
-  color: black;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
+    background: var(--gold);
+    color: black;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn-gold:hover {
-  transform: translateY(-3px);
-  background: #b8952e;
+    transform: translateY(-3px);
+    background: #b8952e;
 }
 
-/* RIGHT GRID */
+/* Skills grid */
 .skills-right {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-/* GLASS CARD */
+/* Skill card */
 .skill-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  border-radius: 18px;
-
-  padding: 35px 20px;
-  text-align: center;
-
-  transition: 0.35s ease;
+    text-align: center;
 }
 
-/* ICON */
 .skill-card i {
-  font-size: 34px;
-  color: #d4af37;
-  margin-bottom: 14px;
+    font-size: 34px;
+    color: var(--gold);
+    margin-bottom: 14px;
 }
 
-/* TITLE */
 .skill-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #f5f5f5;
+    color: #f5f5f5;
 }
-
-/* HOVER EFFECT */
-.skill-card:hover {
-  transform: translateY(-8px);
-  border-color: #d4af37;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .about-section {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-right {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Core Expertise */
-.card i {
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: #4fc3f7;
-}
-
-/* optional: small animation */
-.card:hover i {
-    transform: scale(1.15);
-    transition: 0.3s ease;
-}
-
-
 
 /* ========================================
    PROJECTS
 ======================================== */
-.project-card {
-    background: #222;
-    padding: 28px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    transition: 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-}
-
 .project-btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 18px;
-    background: #4fc3f7;
+    background: var(--accent);
     color: #111;
-    font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s;
 }
 
 .project-btn:hover {
     background: #29b6f6;
 }
 
-
-/* GitHub Projects Section */
-#github-projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding-top: 20px;
-}
-
-/* Each card */
-#github-projects .card {
-    background-color: #222;       /* dark card background */
-    padding: 25px 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Hover effect */
-#github-projects .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.7);
-}
-
-/* Project name */
-#github-projects .card h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #4fc3f7; /* highlight color */
-}
-
-/* Description */
-#github-projects .card p {
-    flex-grow: 1;
-    margin-bottom: 15px;
-    color: #ddd;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-/* Link button */
-#github-projects .card a {
-    padding: 10px 15px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: #4fc3f7;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-#github-projects .card a:hover {
-    background-color: #38b0e3;
-}
-
 /* ========================================
    METRICS
 ======================================== */
-/* metrics container */
 .metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -420,140 +292,127 @@ body {
     padding: 60px 20px;
 }
 
-/* Each metric card */
 .metrics > div {
-    background: #222; /* dark card */
+    background: #222;
     padding: 35px 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* clickable for counting */
+    transition: 0.3s;
 }
 
-/* Hover effect */
-.metrics > div:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
-}
-
-/* Icon style */
-.metrics i {
-    font-size: 28px;
-    color: #dfa834a9; /* subtle goldish highlight */
-    margin-bottom: 12px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Icon hover effect */
-.metrics > div:hover i {
-    transform: scale(1.2);
-    color: #f0b429; /* brighter gold on hover */
-}
-
-/* Numbers */
 .counter {
     font-size: 2.8rem;
     font-weight: bold;
-    color: #4fc3f7; /* your accent color */
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
+    color: var(--accent);
 }
-
-/* Labels */
-.metrics p {
-    color: #ddd;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .metrics {
-        gap: 25px;
-    }
-
-    .counter {
-        font-size: 2.2rem;
-    }
-
-    .metrics i {
-        font-size: 24px;
-    }
-}
-
 
 /* ========================================
-   FORM
+   CONTACT SECTION (PREMIUM)
 ======================================== */
-/* Center the section */
-section {
+.contact-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* full screen height */
-    padding: 40px 20px;
-    background-color: #1a1a1a; /* dark background */
-    color: #fff;
+
+    min-height: 100vh; /* FULL screen height */
+    padding: 20px;
+
+    background: linear-gradient(135deg, #0c0c0f, #141418);
 }
 
-/* Form container */
+/* FORM CONTAINER */
 .contact-form {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    max-width: 500px;
-    background: #222; /* dark card */
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    max-width: 520px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 35px;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    transition: 0.3s;
 }
 
-/* Form inputs */
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+}
+
+/* INPUTS */
 .contact-form input,
 .contact-form textarea {
+    width: 100%;
     padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    background-color: #333;
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+    background-color: rgba(255,255,255,0.06);
     color: #fff;
-    transition: 0.3s;
+
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
-/* Input focus effect */
+/* PLACEHOLDER */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* FOCUS EFFECT */
 .contact-form input:focus,
 .contact-form textarea:focus {
-    background-color: #444;
-    box-shadow: 0 0 0 2px #4fc3f7;
+    border: 1px solid var(--gold);
+    background-color: rgba(255,255,255,0.08);
+    box-shadow: 0 0 10px rgba(198,167,94,0.3);
 }
 
-/* Button styling */
-.contact-form .btn-primary {
-    padding: 15px;
-    border-radius: 8px;
-    border: none;
-    background-color: #4fc3f7;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Button hover effect */
-.contact-form .btn-primary:hover {
-    background-color: #38b0e3;
-}
-
-/* Responsive textarea */
+/* TEXTAREA */
 .contact-form textarea {
-    resize: vertical;
     min-height: 120px;
+    resize: none;
 }
 
+/* BUTTON */
+.contact-form button {
+    width: 100%;
 
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    color: #111;
 
+    padding: 14px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    border: none;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(198,167,94,0.4);
+}
+
+/* SUCCESS / ERROR STATES (OPTIONAL) */
+.contact-form .success {
+    color: #4caf50;
+    margin-top: 10px;
+}
+
+.contact-form .error {
+    color: #ff4d4d;
+    margin-top: 10px;
+}
 /* ========================================
    WHATSAPP FLOAT
 ======================================== */
