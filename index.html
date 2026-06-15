@@ -67,82 +67,73 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-
     <div class="hero-bg-left"></div>
 
-    <div class="hero-image">
-        <img
-            src=""
-            alt=""
-        />
-    </div>
-
     <div class="hero-content">
-        <h1>Wilfred Ochia</h1>
-        <p>Advanced Data Analyst | SQL | Python | Excel | Power BI</p>
-    </div>
+        <span class="hero-badge">Data Analyst • SQL • Python • Power BI</span>
+        <h1>Turning data into decisions that drive growth.</h1>
+        <p>I build analytics solutions, dashboards, and data products that make complex information clear, actionable, and business-ready.</p>
 
+        <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Let’s Talk</a>
+        </div>
+
+        <ul class="hero-highlights">
+            <li><i class="fa-solid fa-check"></i> Dashboard design and reporting</li>
+            <li><i class="fa-solid fa-check"></i> Data cleaning and analytics engineering</li>
+            <li><i class="fa-solid fa-check"></i> Interactive apps and business insights</li>
+        </ul>
+    </div>
 </section>
 
-
-
 <!-- ================= ABOUT ================= -->
-<section class="contact-section">
+<section id="about" class="contact-section reveal">
+    <div class="container about-grid">
+        <div class="about-left">
+            <span class="section-label">About Me</span>
+            <h2>I create analytics experiences that are both insightful and practical.</h2>
+            <p>
+                I’m Wilfred Ochia, an Advanced Data Analyst who combines technical depth with business thinking to build scalable data systems, polished dashboards, and smart automation solutions.
+            </p>
+            <div class="about-actions">
+                <a href="#projects" class="btn-gold">See My Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </div>
 
-  <!-- LEFT -->
-  <div class="about-left">
-    <h2>About Me</h2>
+        <div class="skills-right">
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h4>SQL & Databases</h4>
+            </div>
 
-    <p>
-      I’m Wilfred Ochia, an Advanced Data Analyst who builds scalable data
-      systems, dashboards, APIs, and intelligent solutions that turn raw data
-      into business growth.
-    </p>
+            <div class="skill-card">
+                <i class="fa-brands fa-python"></i>
+                <h4>Python Analytics</h4>
+            </div>
 
-    <a href="#contact" class="btn-gold">Hire Me</a>
-  </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h4>Power BI Dashboards</h4>
+            </div>
 
+            <div class="skill-card">
+                <i class="fa-solid fa-table"></i>
+                <h4>Excel & Data Modeling</h4>
+            </div>
 
-  <!-- RIGHT (Glass Cards with Icons) -->
-  <div class="skills-right">
+            <div class="skill-card">
+                <i class="fab fa-google"></i>
+                <h4>Google Cloud / Colab</h4>
+            </div>
 
-    <div class="skill-card">
-      <i class="fa-solid fa-database"></i>
-      <h4>SQL & Databases</h4>
+            <div class="skill-card">
+                <i class="fab fa-aws"></i>
+                <h4>AWS Cloud Solutions</h4>
+            </div>
+        </div>
     </div>
-
-    <div class="skill-card">
-      <i class="fa-brands fa-python"></i>
-      <h4>Python Analytics</h4>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-chart-line"></i>
-      <h4>Power BI Dashboards</h4>
-    </div>
-
-
-  <div class="skill-card">
-        <i class="fa-solid fa-table"></i>
-    <h4>Excel & Data Modeling</h4>
-</div>
-
-    
-
-    <div class="skill-card">
-      <i class="fab fa-google"></i>
-      <h4>Google Cloud Platform/Colab</h4>
-    </div>
-
-     
-     <div class="skill-card">
-        <i class="fab fa-aws"></i>
-      <h4>AWS Cloud Platform</h4>
-    </div>
-
-
-  </div>
-
 </section>
 
 
@@ -218,233 +209,185 @@
 
 <!-- ================= PROJECTS ================= -->
 <section id="projects" class="section reveal">
-
     <div class="container">
-
-        <h2>Featured Projects</h2>
+        <div class="section-heading">
+            <span class="section-label">Featured Projects</span>
+            <h2>Selected work that highlights my analytics and data storytelling skills.</h2>
+        </div>
 
         <div class="projects-grid">
-
-            <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-content">
-                    <h3><i class="fas fa-magnifying-glass-chart"></i>Exploratory Data Analysis</h3>
-                    <p>EDA, feature engineering, data cleaning, removing missing values and outliers.</p>
-
-                    <a href="https://colab.research.google.com/drive/1eyu8pTkgPok7YapOpArloNBZJuppiVo-?usp=sharing"
-                       target="_blank"
-                       class="project-btn">
+                    <h3><i class="fas fa-magnifying-glass-chart"></i> Customer EDA & Insights</h3>
+                    <p>Cleaned, explored, and transformed raw customer data into a clear narrative with actionable patterns and quality checks.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>EDA</span>
+                    </div>
+                    <a href="https://colab.research.google.com/drive/1eyu8pTkgPok7YapOpArloNBZJuppiVo-?usp=sharing" target="_blank" class="project-btn">
                         <i class="fas fa-laptop-code"></i> View Notebook
                     </a>
                 </div>
             </div>
 
-            <!-- Project 2 -->
             <div class="project-card">
-               <div class="card">
-    <i class="fas fa-database"></i>
-    <h3>Power BI Semantic Model Design</h3>
-    <p>
-        Built enterprise semantic model with relationships, DAX measures,
-        incremental refresh, and aggregation tables for high-performance reporting.
-    </p>
-                    <a href="https://app.powerbi.com/groups/"
-                        target="_blank"
-                        class="project-btn">
+                <div class="project-content">
+                    <h3><i class="fas fa-database"></i> Power BI Semantic Model</h3>
+                    <p>Designed a scalable semantic model with optimized relationships, measures, and refresh strategies for enterprise reporting.</p>
+                    <div class="project-tags">
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Modeling</span>
+                    </div>
+                    <a href="https://app.powerbi.com/groups/" target="_blank" class="project-btn">
                         <i class="fas fa-external-link-alt"></i> Live Dashboard
-                        </a>
-
+                    </a>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-content">
                     <h3><i class="fas fa-heartbeat"></i> Heart Disease Risk Analysis</h3>
-                    <p>EDA, feature engineering, and visualization of cardiovascular risk factors using Python & Pandas.</p>
-
-                    <a href="https://colab.research.google.com/drive/1EV4a5Q3FkyYG5r_pG3aSI5Ymx3I2HntG?usp=sharing"
-                       target="_blank"
-                       class="project-btn">
+                    <p>Built an analytical workflow for cardiovascular risk assessment using Python, visualizations, and careful feature exploration.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Visualization</span>
+                        <span>Healthcare</span>
+                    </div>
+                    <a href="https://colab.research.google.com/drive/1EV4a5Q3FkyYG5r_pG3aSI5Ymx3I2HntG?usp=sharing" target="_blank" class="project-btn">
                         <i class="fas fa-laptop-code"></i> View Notebook
                     </a>
                 </div>
             </div>
 
-                 <!-- Project 4 -->
             <div class="project-card">
                 <div class="project-content">
-                    <h3><i class="fas fa-heartbeat"></i> Heart Disease Risk Analysis</h3>
-                    <p>EDA, feature engineering, and visualization of cardiovascular risk factors using Python & Pandas.</p>
-
-                    <a href="https://colab.research.google.com/drive/1WWHiKUeiFIsrNOdH5bPARt0vcB_tdRnK?usp=sharing"
-                       target="_blank"
-                       class="project-btn">
-                        <i class="fas fa-laptop-code"></i> View Notebook
+                    <h3><i class="fas fa-rocket"></i> Interactive Streamlit App</h3>
+                    <p>Developed an interactive analytics experience that can be shared and explored in a browser with minimal setup.</p>
+                    <div class="project-tags">
+                        <span>Streamlit</span>
+                        <span>App</span>
+                        <span>Analytics</span>
+                    </div>
+                    <a href="https://credit-card-fraud-detection-dcb6szycebx7wahqiqws73.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-btn">
+                        <i class="fas fa-external-link-alt"></i> Open App
                     </a>
                 </div>
             </div>
-
-               <!-- Project 5 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3><i class="fas fa-heartbeat"></i> Heart Disease Risk Analysis & Visualization</h3>
-                    <p>EDA, feature engineering, and visualization of cardiovascular risk factors using Python & Pandas.</p>
-
-                    <a href="https://colab.research.google.com/drive/1YsXpmuptFNnt_5Xi-HBPzsquKdSE9I0B?usp=sharing"
-                       target="_blank"
-                       class="project-btn">
-                        <i class="fas fa-laptop-code"></i> View Notebook
-                    </a>
-                </div>
-            </div>
-
-
-
-               <!-- Project 6 -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3><i class="fas fa-heartbeat"></i>Heart Disease Risk Analysis & Visualization</h3>
-                    <p>EDA, feature engineering, and visualization of cardiovascular risk factors using Python & Pandas.</p>
-
-                    <a href="https://colab.research.google.com/drive/193p44INgR1j8bBKfYJ_-TzIuV_-J1J0l?usp=sharing"
-                       target="_blank"
-                       class="project-btn">
-                        <i class="fas fa-laptop-code"></i> View Notebook
-                    </a>
-                </div>
-            </div>
-
-
         </div>
     </div>
-
 </section>
-
-
-
-
-
-</section>
-
-
 
 <!-- ================= METRICS ================= -->
 <div class="container metrics">
-
-        <div class="metric-card">
-            <i class="fa-solid fa-rocket"></i>
-            <h2 class="counter" data-target="10">0</h2>
-            <p>Projects Delivered</p>
-        </div>
-
-        <div class="metric-card">
-            <i class="fa-solid fa-gauge-high"></i>
-            <h2 class="counter" data-target="60" data-suffix="%">0</h2>
-            <p>Performance Optimization</p>
-        </div>
-
-        <div class="metric-card">
-            <i class="fa-solid fa-chart-line"></i>
-            <h2 class="counter" data-target="50" data-suffix="+">0</h2>
-            <p>DAX Measures Optimized</p>
-        </div>
-
+    <div class="metric-card">
+        <i class="fa-solid fa-rocket"></i>
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Projects Delivered</p>
     </div>
 
+    <div class="metric-card">
+        <i class="fa-solid fa-gauge-high"></i>
+        <h2 class="counter" data-target="60" data-suffix="%">0</h2>
+        <p>Performance Optimization</p>
+    </div>
 
+    <div class="metric-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h2 class="counter" data-target="50" data-suffix="+">0</h2>
+        <p>DAX Measures Optimized</p>
+    </div>
+</div>
 
 <!-- ================= BLOG ================= -->
 <section id="blog" class="section reveal">
-
     <div class="container">
-
-        <h2>Insights</h2>
+        <div class="section-heading">
+            <span class="section-label">Insights</span>
+            <h2>Practical ideas and lessons from working with data at scale.</h2>
+        </div>
 
         <div class="grid-3">
-
             <div class="card">
                 <h3>Designing Scalable Semantic Models</h3>
-                <p>Best practices for enterprise Power BI architecture.</p>
+                <p>Best practices for building reliable Power BI and analytics models that stay fast as data grows.</p>
             </div>
 
             <div class="card">
                 <h3>Real-Time vs Batch Analytics</h3>
-                <p>Choosing the right architecture strategy.</p>
+                <p>Choosing the right architecture approach to match the needs of the business and the data pipeline.</p>
             </div>
 
             <div class="card">
                 <h3>DAX Performance Optimization</h3>
-                <p>Improving query speed and reducing load time.</p>
+                <p>Improving query speed, reducing load time, and making dashboards feel more responsive for users.</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 
 
 <!-- ================= GITHUB ================= -->
 <section class="section dark">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label">GitHub</span>
+            <h2>Explore more of my analytical work and repositories.</h2>
+        </div>
 
+        <div class="projects-grid">
+            <div class="card">
+                <i class="fas fa-magnifying-glass-chart"></i>
+                <h3>Exploratory Data Analysis</h3>
+                <p>Advanced analytics of data using Python, Pandas, NumPy, and Jupyter Notebooks.</p>
+                <a href="https://github.com/Wilfred-lab-arch/Exploratory-Data-Analysis" target="_blank" class="project-btn">
+                    <i class="fas fa-code-branch"></i> View Repo
+                </a>
+            </div>
 
-    <div class="projects-grid">
+            <div class="card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Heart Disease Risk Analysis</h3>
+                <p>Advanced analytics and visualization of heart disease risk factors using Jupyter Notebook and Google Colab.</p>
+                <a href="https://github.com/Wilfred-lab-arch/Heart-Disease-Risk-Analysis" target="_blank" class="project-btn">
+                    <i class="fas fa-code-branch"></i> View Repo
+                </a>
+            </div>
 
-    <div class="card">
-        <i class="fas fa-magnifying-glass-chart"></i>
-        <h3>Exploratory Data Analysis</h3>
-        <p>Advanced analytics of data using Python, Pandas, Numpy and Jupyter Notebooks.</p>
-        <a href="https://github.com/Wilfred-lab-arch/Exploratory-Data-Analysis" target="_blank" class="project-btn">
-            <i class="fas fa-code-branch"></i> View Repo
-        </a>
+            <div class="card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>RFM Analysis</h3>
+                <p>Customer segmentation and analysis using RFM methodology in PostgreSQL.</p>
+                <a href="https://github.com/Wilfred-lab-arch/Wilfred-s-rfm-analysis" target="_blank" class="project-btn">
+                    <i class="fas fa-code-branch"></i> View Repo
+                </a>
+            </div>
+        </div>
     </div>
-
-    <div class="card">
-        <i class="fas fa-heartbeat"></i>
-        <h3>Heart Disease Risk Analysis</h3>
-        <p>Advanced analytics and visualization of heart disease risk factors using Jupyter Notebook/Google Colab.</p>
-        <a href="https://github.com/Wilfred-lab-arch/Heart-Disease-Risk-Analysis" target="_blank" class="project-btn">
-            <i class="fas fa-code-branch"></i> View Repo
-        </a>
-    </div>
-
-    <div class="card">
-        <i class="fas fa-chart-pie"></i>
-        <h3>RFM Analysis</h3>
-        <p>Customer segmentation and analysis using RFM methodology in PostgreSQL.</p>
-        <a href="https://github.com/Wilfred-lab-arch/Wilfred-s-rfm-analysis" target="_blank" class="project-btn">
-            <i class="fas fa-code-branch"></i> View Repo
-        </a>
-    </div>
-
-</div>
-
-
-
-
 </section>
-
-
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section reveal">
+    <div class="container contact-grid">
+        <div class="contact-intro">
+            <span class="section-label">Contact</span>
+            <h2>Let’s build something useful together.</h2>
+            <p>I’m open to analytics projects, dashboard work, and data-driven collaborations that turn information into action.</p>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:wilfredochia34@gmail.com">wilfredochia34@gmail.com</a></li>
+                <li><i class="fa-solid fa-location-dot"></i> <a href="https://www.google.com/maps/search/?api=1&query=Nigeria" target="_blank" rel="noopener noreferrer">Based in Nigeria and available for remote or hybrid opportunities</a></li>
+            </ul>
+        </div>
 
-    <div class="container">
-
-        <h2>Let’s Collaborate</h2>
-
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn-primary">Send Message</button>
-</form>
-
-
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
     </div>
-
 </section>
 
 
@@ -476,7 +419,7 @@
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2026 | Wilfred Ochia . All rights reserved.</p>
+    <p>© 2026 Wilfred Ochia. Built with a focus on clarity, design, and data-driven storytelling.</p>
 </footer>
 
 </body>
