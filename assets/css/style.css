@@ -412,6 +412,28 @@ a {
     gap: 30px;
 }
 
+/* DEMO SECTION */
+#demo .section-heading {
+    margin-bottom: 34px;
+}
+
+#demo .project-card {
+    min-height: 320px;
+}
+
+#demo .project-content h3 {
+    color: var(--gold);
+}
+
+#demo .project-content p {
+    color: #d8d8d8;
+}
+
+#demo .project-tags span {
+    background: rgba(94, 234, 212, 0.12);
+    color: var(--accent);
+}
+
 /* ========================================
    METRICS
 ======================================== */
