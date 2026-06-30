@@ -97,3 +97,31 @@ document.querySelectorAll('.metric-card').forEach(card => {
   }
 
   fetchGitHubProjects();
+
+// Welcome modal popup
+const welcomeModal = document.getElementById('welcome-modal');
+const welcomeModalClose = document.querySelector('.modal-close');
+
+function openWelcomeModal() {
+  welcomeModal.classList.add('active');
+}
+
+function closeWelcomeModal() {
+  welcomeModal.classList.remove('active');
+}
+
+window.addEventListener('load', () => {
+  setTimeout(openWelcomeModal, 400);
+});
+
+welcomeModalClose.addEventListener('click', closeWelcomeModal);
+
+welcomeModal.addEventListener('click', (event) => {
+  if (event.target === welcomeModal) {
+    closeWelcomeModal();
+  }
+});
+
+welcomeModal.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', closeWelcomeModal);
+});
