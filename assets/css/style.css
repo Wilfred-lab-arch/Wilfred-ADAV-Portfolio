@@ -861,12 +861,32 @@ footer {
     }
 
     .modal-card {
-        max-width: 92vw;
-        padding: 28px 22px;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 8px;
+        max-height: calc(100vh - 40px);
+        padding: 28px 20px;
+        border-radius: 18px;
     }
 
     .modal-close {
-        top: 14px;
-        right: 14px;
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-card h2 {
+        font-size: clamp(1.75rem, 5vw, 2.4rem);
+    }
+
+    .modal-card p {
+        font-size: 1rem;
+        margin-bottom: 22px;
+    }
+
+    .modal-card .btn-primary {
+        width: 100%;
+        padding: 14px 20px;
     }
 }
